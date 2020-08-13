@@ -1,0 +1,69 @@
+.fadeIn {
+    /* La duracion de la animacion  */
+    animation-duration: 3s;
+    -webkit-animation-duration: 3s;
+    /* Para q la animación se aplique de entrada y de salida  */
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    /* Para darle nombre a la animacion que seria el mismo que la clase  */
+    animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
+}
+
+
+/* El keyframe debe tener el nombre de la animation para que funcione  
+Se define en Keyframes que tipo de animacion tendra*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeInDown {
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    animation-name: fadeInDown;
+    -webkit-animation-name: fadeInDown;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        /* Faltaba el simbolo del porcentaje en el -100  */
+        transform: translate3d(0,-100%,0);
+        -webkit-transform: translate3d(0,-100%,0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
+    }
+}
+
+.fadeInUp {
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        /* Faltaba el simbolo del porcentaje en el -100  */
+        transform: translate3d(0,100%,0);
+        -webkit-transform: translate3d(0,100%,0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
+    }
+}
